@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Parcial1 - Perfil (SPA)</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="images/logo.png" alt="logo" class="logo">
+        <h1 class="visually-hidden">Facebook Mock</h1>
+      </div>
+      <form class="search" role="search" onsubmit="return false;">
+        <label for="global-search" class="visually-hidden">Buscar</label>
+        <input id="global-search" type="search" placeholder="Buscar..." />
+      </form>
+    </div>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <button class="nav-btn active" data-section="muro">Muro</button>
+      <button class="nav-btn" data-section="info">Info</button>
+      <button class="nav-btn" data-section="photos">Photos</button>
+      <button class="nav-btn" data-section="boxes">Boxes</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <aside class="sidebar" aria-label="Perfil lateral">
+      <figure class="profile-photo" aria-hidden="true">
+        <div class="avatar"></div>
+        <figcaption class="profile-name">Nombre</figcaption>
+      </figure>
+
+      <ul class="profile-links">
+        <li>Información</li>
+        <li>Email</li>
+        <li>Teléfono</li>
+        <li>Intereses</li>
+        <li>Situación sentimental</li>
+        <li class="ver-todos">Ver todos</li>
+      </ul>
+
+      <section class="friends">
+        <h3>X Amigos</h3>
+        <div class="friends-grid" aria-hidden="true">
+          <div class="friend"></div>
+          <div class="friend"></div>
+          <div class="friend"></div>
+        </div>
+      </section>
+    </aside>
+
+    <section id="content" class="content" aria-live="polite">
+      <!-- Contenido dinámico cargado por JS -->
+      <article id="muro" class="page active" data-section="muro">
+        <div class="post-box">
+          <textarea placeholder="Escribe algo..." aria-label="Escribe algo"></textarea>
+          <div class="actions">
+            <button id="attach">Adjuntar</button>
+            <button id="post" class="primary">Compartir</button>
+          </div>
+        </div>
+
+        <div class="posts">
+          <article class="post">
+            <div class="post-left"><div class="small-avatar"></div></div>
+            <div class="post-body">
+              <h4 class="post-author">Nombre</h4>
+              <p class="post-time">Lunes a las 8:45pm - Me gusta</p>
+              <div class="post-actions">
+                <button>Me gusta</button>
+                <button>Compartir</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </article>
+
+      <article id="info" class="page" data-section="info">
+        <h2>Info</h2>
+        <hr>
+        <dl class="info-list">
+          <dt>Email</dt><dd>alguien@example.com</dd>
+          <dt>Teléfono</dt><dd>+57 3XX XXX XXXX</dd>
+          <dt>Intereses</dt><dd>Diseño, Música</dd>
+          <dt>Situación sentimental</dt><dd>Soltero</dd>
+        </dl>
+      </article>
+
+      <article id="photos" class="page" data-section="photos">
+        <h2>Photos</h2>
+        <div class="photos-grid">
+          <!-- placeholder images -->
+          <div class="photo"></div><div class="photo"></div><div class="photo"></div>
+          <div class="photo"></div><div class="photo"></div><div class="photo"></div>
+        </div>
+      </article>
+
+      <article id="boxes" class="page" data-section="boxes">
+        <h2>Boxes</h2>
+        <p>Contenido de Boxes (simulado)</p>
+        <div class="boxes-grid">
+          <div class="box">Caja 1</div>
+          <div class="box">Caja 2</div>
+          <div class="box">Caja 3</div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Parcial 1 - Desarrollo Web 1</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
